@@ -50,6 +50,11 @@ mongo_uri = f"mongodb+srv://{mongo_user}:{mongo_password}@cluster0.mongodb.net/m
 # Crea el cliente de MongoDB
 client = MongoClient(mongo_uri)
 ``` 
+
+6. Para conectarte a google vas a tener que generar la api json key desde tu panel de api de google e colocarlo en el mismo directorio que el .py, luego modificar la linea:
+``` 
+credentials = Credentials.from_service_account_file('NAME OF CREDENCIAL.json', scopes=['https://www.googleapis.com/auth/spreadsheets','https://www.googleapis.com/auth/drive'])
+``` 
   
 ## 🎮 Uso
 
