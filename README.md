@@ -1,7 +1,5 @@
 # 🤖 BotiBotDiscord - Gestión de Promociones en Discord
 
-![BotiBotDiscord]
-
 ![image](https://github.com/CositortoL/BotiBotDiscord/assets/134352245/e75e2e9b-43b1-4600-ba19-94da6df9c11a)
 
 
