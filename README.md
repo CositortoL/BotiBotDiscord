@@ -32,24 +32,59 @@ Este bot de Discord está diseñado para gestionar promociones en un servidor. P
     ```
     python bot.py
     ```
+5. Si quieres conectarte a mongo Db con certificado debes colocar el certificado en el mismo lugar que el .py y modificar la linea 91 colcandole el nombre del certificado:
+```
+client = MongoClient(uri, tls=True, tlsCertificateKeyFile='{NOMBRE DEL CERTIFICADO}.pem')
+```
+En caso que quieras Usuario y Password debes borrar la linea 91 y adaptarlo a esto:
+```
+Caso contrario debes colcoar el MongoClient con usuario como la documentacion de mongo lo indica:
 
+# Obtén las credenciales de las variables de entorno
+mongo_user = os.getenv('MONGO_USER')
+mongo_password = os.getenv('MONGO_PASSWORD')
+
+# Crea la cadena de conexión utilizando las credenciales
+mongo_uri = f"mongodb+srv://{mongo_user}:{mongo_password}@cluster0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
+# Crea el cliente de MongoDB
+client = MongoClient(mongo_uri)
+``` 
+  
 ## 🎮 Uso
 
 El bot soporta los siguientes comandos:
 
-- `/promocion`: Inicia un diálogo con el usuario para añadir una nueva promoción. El usuario debe tener habilitada la opción de recibir mensajes directos de los miembros del servidor.
+- `/promocion`: Este comando permite a los usuarios agregar una nueva promoción al sistema. Cuando un usuario escribe /promocion, el bot enviará un mensaje privado al usuario solicitando los detalles de la promoción. El usuario debe responder a estos mensajes privados con la información solicitada.
+
+Para que este comando funcione correctamente, el usuario debe tener habilitada la opción de recibir mensajes privados de servidores en sus ajustes de privacidad de Discord.
 
 - `/ver_promociones`: Muestra todas las promociones actuales en el servidor.
 
-- `/eliminar_promocion <UUID>`: Elimina una promoción con el UUID especificado. Este comando sólo puede ser utilizado por usuarios con los roles 'ADMIN'.
+- `/eliminar_registro`: Este comando permite a los administradores eliminar un registro de promoción existente. Cuando un administrador escribe /eliminar_registro, el bot solicitará el UUID del registro que se desea eliminar.
 
 - `/ver_logs`: Muestra todos los registros de logs. Este comando sólo puede ser utilizado por usuarios con los roles 'ADMIN'.
 
-- `/editar_registro <UUID>`: Inicia un diálogo con el usuario para editar una promoción con el UUID especificado. Este comando sólo puede ser utilizado por usuarios con los roles 'ADMIN'.
+- `/editar_registro`: Este comando permite a los administradores editar un registro de promoción existente. Cuando un administrador escribe /editar_registro, el bot solicitará el UUID del registro que se desea editar y luego solicitará la nueva información para ese registro.
 
-- `/replica`: Comprueba las diferencias entre la base de datos de Google Sheets y la base de datos de MongoDB y actualiza la base de datos de MongoDB en consecuencia. Este comando sólo puede ser utilizado por usuarios con el rol 'ADMIN'.
+- `/replica`: Este comando permite a los administradores sincronizar los datos entre Google Sheets y MongoDB. Cuando un administrador escribe /replica, el bot comparará los datos en Google Sheets y MongoDB y realizará las actualizaciones necesarias.
 
 El bot también realiza una tarea cada 7 días para comprobar las promociones vencidas y envía notificaciones al servidor.
+
+
+`Tareas Automáticas`
+El bot tiene una tarea automática que se ejecuta cada 7 días para verificar las promociones vencidas. Esta tarea busca todas las promociones que hayan vencido y las marca como vencidas en la base de datos. También envía un mensaje al canal de Discord especificado para informar sobre las promociones vencidas.
+
+`Errores y Excepciones`
+El bot está diseñado para manejar varios tipos de errores y excepciones. Aquí hay algunos ejemplos:
+Si un usuario intenta usar un comando para el cual no tiene permisos, el bot enviará un mensaje indicando que el usuario no tiene permisos para usar ese comando.
+Si un usuario proporciona información incorrecta o incompleta al agregar o editar una promoción, el bot enviará un mensaje indicando el error y solicitando la información correcta.
+Si ocurre un error al intentar sincronizar los datos entre Google Sheets y MongoDB con el comando /replica, el bot enviará un mensaje con detalles sobre el error.
+Si un usuario no responde a los mensajes privados del bot dentro de un cierto tiempo al agregar una nueva promoción, el bot cancelará el proceso y enviará un mensaje indicando que se ha agotado el tiempo.
+Si ocurre un error al intentar eliminar o editar un registro que no existe, el bot enviará un mensaje indicando que el registro no se encontró.
+
+Por favor, ten en cuenta que estos son solo algunos ejemplos y el bot puede manejar muchos otros tipos de errores y excepciones. Siempre que ocurra un error, el bot intentará proporcionar información útil para ayudar a resolver el problema.
+
 
 ## 👥 Contribución
 
