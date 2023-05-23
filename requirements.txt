@@ -1,0 +1,7 @@
+discord.py
+pymongo
+gspread
+oauth2client
+python-dotenv 
+dnspython
+asyncio
