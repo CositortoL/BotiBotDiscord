@@ -70,11 +70,13 @@ Para que este comando funcione correctamente, el usuario debe tener habilitada l
 - `/replica`: Este comando permite a los administradores sincronizar los datos entre Google Sheets y MongoDB. Cuando un administrador escribe /replica, el bot comparará los datos en Google Sheets y MongoDB y realizará las actualizaciones necesarias.
 
 
-##👾Tareas Automáticas👾
+## 👾Tareas Automáticas👾
 `
 El bot tiene una tarea automática que se ejecuta cada 7 días para verificar las promociones vencidas. Esta tarea busca todas las promociones que hayan vencido y las marca como vencidas en la base de datos. También envía un mensaje al canal de Discord especificado para informar sobre las promociones vencidas.
 `
-##🚨Errores y Excepciones🚨`
+## 🚨Errores y Excepciones🚨
+
+`
 El bot está diseñado para manejar varios tipos de errores y excepciones. Aquí hay algunos ejemplos:
 Si un usuario intenta usar un comando para el cual no tiene permisos, el bot enviará un mensaje indicando que el usuario no tiene permisos para usar ese comando.
 Si un usuario proporciona información incorrecta o incompleta al agregar o editar una promoción, el bot enviará un mensaje indicando el error y solicitando la información correcta.
