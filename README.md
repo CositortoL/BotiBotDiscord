@@ -32,7 +32,7 @@ Este bot de Discord está diseñado para gestionar promociones en un servidor. P
     ```
     python bot.py
     ```
-5. Si quieres conectarte a mongo Db con certificado debes colocar el certificado en el mismo lugar que el .py y modificar la linea 91 colcandole el nombre del certificado:
+5. Si quieres conectarte a mongo Db con certificado debes colocar el certificado en el mismo lugar que el .py y modificar las lineas de la 88 a 102 colcandole el nombre del certificado, haciendo referencia al client, db y collection de mongo:
 ```
 client = MongoClient(uri, tls=True, tlsCertificateKeyFile='{NOMBRE DEL CERTIFICADO}.pem')
 ```
