@@ -76,16 +76,14 @@ El bot tiene una tarea automática que se ejecuta cada 7 días para verificar la
 `
 ## 🚨Errores y Excepciones🚨
 
-`
-El bot está diseñado para manejar varios tipos de errores y excepciones. Aquí hay algunos ejemplos:
+`El bot está diseñado para manejar varios tipos de errores y excepciones. Aquí hay algunos ejemplos:
 Si un usuario intenta usar un comando para el cual no tiene permisos, el bot enviará un mensaje indicando que el usuario no tiene permisos para usar ese comando.
 Si un usuario proporciona información incorrecta o incompleta al agregar o editar una promoción, el bot enviará un mensaje indicando el error y solicitando la información correcta.
 Si ocurre un error al intentar sincronizar los datos entre Google Sheets y MongoDB con el comando /replica, el bot enviará un mensaje con detalles sobre el error.
 Si un usuario no responde a los mensajes privados del bot dentro de un cierto tiempo al agregar una nueva promoción, el bot cancelará el proceso y enviará un mensaje indicando que se ha agotado el tiempo.
 Si ocurre un error al intentar eliminar o editar un registro que no existe, el bot enviará un mensaje indicando que el registro no se encontró.
 
-Por favor, ten en cuenta que estos son solo algunos ejemplos y el bot puede manejar muchos otros tipos de errores y excepciones. Siempre que ocurra un error, el bot intentará proporcionar información útil para ayudar a resolver el problema.
-`
+Por favor, ten en cuenta que estos son solo algunos ejemplos y el bot puede manejar muchos otros tipos de errores y excepciones. Siempre que ocurra un error, el bot intentará proporcionar información útil para ayudar a resolver el problema.`
 
 ## 👥 Contribución
 
