@@ -1,6 +1,9 @@
 # 🤖 BotiBotDiscord - Gestión de Promociones en Discord
 
-![BotiBotDiscord](![image](https://github.com/CositortoL/BotiBotDiscord/assets/134352245/d93f7540-7332-4bdb-a068-fb0b831d9662))
+![BotiBotDiscord]
+
+![image](https://github.com/CositortoL/BotiBotDiscord/assets/134352245/e75e2e9b-43b1-4600-ba19-94da6df9c11a)
+
 
 Este bot de Discord está diseñado para gestionar promociones en un servidor. Permite a los usuarios añadir, editar, eliminar y visualizar promociones. También verifica las promociones vencidas y envía notificaciones al servidor. El bot utiliza Google Sheets como base de datos para almacenar las promociones y MongoDB para réplica y respaldo.
 
