@@ -40,11 +40,11 @@ The bot supports the following commands:
 
 - `/ver_promociones`: Displays all the current promotions in the server.
 
-- `/eliminar_promocion <UUID>`: Deletes a promotion with the specified UUID. This command can only be used by users with the 'ADMIN', 'TETON LEGENDARIO', or 'TETON GRAN MAESTRO' roles.
+- `/eliminar_promocion <UUID>`: Deletes a promotion with the specified UUID. This command can only be used by users with the 'ADMIN'roles.
 
-- `/ver_logs`: Displays all the log records. This command can only be used by users with the 'ADMIN', 'TETON LEGENDARIO', or 'TETON GRAN MAESTRO' roles.
+- `/ver_logs`: Displays all the log records. This command can only be used by users with the 'ADMIN' roles.
 
-- `/editar_registro <UUID>`: Starts a dialogue with the user to edit a promotion with the specified UUID. This command can only be used by users with the 'ADMIN', 'TETON LEGENDARIO', or 'TETON GRAN MAESTRO' roles.
+- `/editar_registro <UUID>`: Starts a dialogue with the user to edit a promotion with the specified UUID. This command can only be used by users with the 'ADMIN' roles.
 
 - `/replica`: Checks for differences between the Google Sheets database and the MongoDB database and updates the MongoDB database accordingly. This command can only be used by users with the 'ADMIN' role.
 
