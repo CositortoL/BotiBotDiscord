@@ -34,7 +34,6 @@ bot = commands.Bot(command_prefix='/', intents=intents)
 
 promociones = []  # Lista para almacenar las promociones
 
-
 ### BLOQUE DE LOGS ###
 
 #Configura el logging
